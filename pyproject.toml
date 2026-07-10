@@ -1,20 +1,9 @@
 [project]
-name = "automate"
+name = "google-form-automate"
 version = "0.1.0"
-description = "Discover Google Form fields, generate responses, and optionally submit them."
-authors = [
-    {name = "shrawan sunar",email = "shrawansunar.6@gmail.com"}
-]
+description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.11"
 dependencies = [
-    "requests (>=2.32.5,<3.0.0)"
+    "requests>=2.34.2",
 ]
-
-[project.scripts]
-gform-automate = "automate_cli:main"
-
-[build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
-
