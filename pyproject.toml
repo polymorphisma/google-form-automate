@@ -1,9 +1,13 @@
 [project]
 name = "google-form-automate"
 version = "0.1.0"
-description = "Add your description here"
+description = "Discover Google Form fields, generate responses, and optionally submit them."
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "requests>=2.34.2",
+    "faker>=37.0.0",
 ]
+
+[project.scripts]
+gform-automate = "automate_cli:main"

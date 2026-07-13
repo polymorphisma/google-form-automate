@@ -1,18 +1,18 @@
 import json
 import random
 
+from faker import Faker
 
-DEFAULT_NAMES = [
-    "Aarav Sharma",
-    "Anita Thapa",
-    "Bikash Gurung",
-    "Kiran Shrestha",
-    "Nisha Rai",
-    "Prakash Adhikari",
-    "Suman Karki",
-    "Mina Tamang",
-]
+
+FAKER = Faker()
 LIKERT_OPTIONS = ["1", "2", "3", "4", "5"]
+SMART_DEMOGRAPHIC_KEYS = {
+    "Education_Level",
+    "Age",
+    "Position_in_Company",
+    "Work_Experience",
+    "Monthly_Income",
+}
 
 
 def load_mapping(path):
@@ -109,9 +109,7 @@ def canonical_choices(values, options):
 
 
 def random_name(index):
-    if index < len(DEFAULT_NAMES):
-        return DEFAULT_NAMES[index]
-    return f"Respondent {index + 1}"
+    return f"{FAKER.first_name()} {FAKER.last_name()}"
 
 
 def is_likert_scale(options):
@@ -191,6 +189,75 @@ def validate_field_overrides(mapping, fixed_values, choice_values):
     return canonical_choice_values
 
 
+def profile_value(options_by_key, key, value):
+    return canonical_option(value, options_by_key.get(key, []))
+
+
+def choose_profile(options_by_key, key, values):
+    return random.choice([profile_value(options_by_key, key, value) for value in values])
+
+
+def set_profile_field(row, key, value, options_by_key, locked_keys):
+    if key in row and key not in locked_keys:
+        row[key] = profile_value(options_by_key, key, value)
+
+
+def apply_smart_demographics(row, options_by_key, fixed_values, choice_values):
+    locked_keys = set(fixed_values) | set(choice_values)
+
+    if "Education_Level" not in locked_keys:
+        row["Education_Level"] = choose_profile(
+            options_by_key,
+            "Education_Level",
+            ["Bachelor's", "Master's", "MPhil", "PhD"],
+        )
+
+    education = row.get("Education_Level")
+
+    if education == "Bachelor's":
+        set_profile_field(row, "Age", "20-30", options_by_key, locked_keys)
+        if random.random() < 0.55:
+            set_profile_field(row, "Position_in_Company", "Junior", options_by_key, locked_keys)
+            set_profile_field(row, "Work_Experience", "Below 1 year", options_by_key, locked_keys)
+            set_profile_field(row, "Monthly_Income", "Below NPR 30,000", options_by_key, locked_keys)
+        else:
+            set_profile_field(row, "Position_in_Company", "Mid Level", options_by_key, locked_keys)
+            set_profile_field(row, "Work_Experience", "1-3 years", options_by_key, locked_keys)
+            set_profile_field(row, "Monthly_Income", "NPR 30,001- NPR 50,000", options_by_key, locked_keys)
+        return
+
+    if education == "Master's":
+        set_profile_field(row, "Age", "20-30", options_by_key, locked_keys)
+        if random.random() < 0.7:
+            set_profile_field(
+                row,
+                "Position_in_Company",
+                choose_profile(options_by_key, "Position_in_Company", ["Mid Level", "Senior"]),
+                options_by_key,
+                locked_keys,
+            )
+            set_profile_field(row, "Work_Experience", "1-3 years", options_by_key, locked_keys)
+            set_profile_field(row, "Monthly_Income", "NPR 50,001- NPR 80,000", options_by_key, locked_keys)
+        else:
+            set_profile_field(row, "Position_in_Company", "Managerial", options_by_key, locked_keys)
+            set_profile_field(row, "Work_Experience", "4-6 years", options_by_key, locked_keys)
+            set_profile_field(row, "Monthly_Income", "Above NPR 80,000", options_by_key, locked_keys)
+        return
+
+    if education in {"MPhil", "PhD"}:
+        set_profile_field(row, "Age", "31-40", options_by_key, locked_keys)
+        set_profile_field(row, "Position_in_Company", "Managerial", options_by_key, locked_keys)
+        set_profile_field(row, "Work_Experience", choose_profile(options_by_key, "Work_Experience", ["4-6 years", "Above 6 years"]), options_by_key, locked_keys)
+        set_profile_field(row, "Monthly_Income", "Above NPR 80,000", options_by_key, locked_keys)
+        return
+
+    if education == "+2":
+        set_profile_field(row, "Age", "20-30", options_by_key, locked_keys)
+        set_profile_field(row, "Position_in_Company", "Junior", options_by_key, locked_keys)
+        set_profile_field(row, "Work_Experience", "Below 1 year", options_by_key, locked_keys)
+        set_profile_field(row, "Monthly_Income", "Below NPR 30,000", options_by_key, locked_keys)
+
+
 def generate_generic_dataset(
     mapping_path,
     records=1,
@@ -201,11 +268,13 @@ def generate_generic_dataset(
     scale_bias_values=None,
     scale_bias_range=None,
     scale_category_size=6,
+    smart_demographics=False,
 ):
     if records < 1:
         raise ValueError("records must be at least 1")
     if seed is not None:
         random.seed(seed)
+        Faker.seed(seed)
 
     scale_bias_values = scale_bias_values or ["3", "4"]
 
@@ -237,6 +306,8 @@ def generate_generic_dataset(
                 scale_biases.get(key, scale_bias),
                 scale_bias_values,
             )
+        if smart_demographics:
+            apply_smart_demographics(row, options_by_key, fixed_values, choice_values)
         dataset.append(row)
     return dataset
 
@@ -244,3 +315,6 @@ def generate_generic_dataset(
 def write_dataset(path, rows):
     with open(path, "w") as f:
         json.dump(rows, f, indent=4)
+
+
+

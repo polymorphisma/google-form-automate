@@ -18,7 +18,7 @@ This machine has the Python launcher available as `py`.
 Install dependencies if needed:
 
 ```powershell
-py -m pip install requests
+py -m pip install requests faker
 ```
 
 ## Current Form
@@ -64,7 +64,7 @@ Important behavior:
 - `--set KEY=VALUE` locks a field to a fixed value for all generated records.
 - `--choose KEY=A,B` randomly chooses from only those listed options, for example `--choose "Gender=Male,Female"`.
 - Unset multiple-choice fields are picked randomly from the form's options.
-- The `Name` field gets generated sample names.
+- The `Name` field gets generated first/last names using Faker.
 - `1-5` scale questions are biased using the scale options below.
 
 ### 4. Scale bias options
@@ -118,4 +118,27 @@ py -m py_compile automate_cli.py form_discovery.py form_submitter.py generic_dat
 - `generic_dataset.py` - generates response rows and weighted 1-5 answers
 - `form_submitter.py` - submits generated rows to Google Forms
 - `discovered_employee_mapping.json` - mapping for the current employee survey form
+
+
+## Recommended 320-response command
+
+Generate 320 realistic records without submitting:
+
+```powershell
+py automate_cli.py fill --mapping discovered_employee_mapping.json --records 320 --choose "Gender=Male,Female" --smart-demographics --scale-bias 0.75 --scale-bias-values 3,4 --output employee_data.json
+```
+
+This applies these consistency rules:
+
+- Bachelor's: age 20-30, junior/below 1 year/below NPR 30,000 or mid level/1-3 years/NPR 30,001-50,000.
+- Master's: age 20-30, mid or senior/1-3 years/NPR 50,001-80,000 or managerial/4-6 years/above NPR 80,000.
+- MPhil or PhD: age 31-40, managerial, 4-6 years or above 6 years, above NPR 80,000.
+- Gender: random Male/Female only.
+- Ratings: 3 or 4 around 75%; 1, 2, and 5 share the remaining 25%.
+
+Submit after checking `employee_data.json`:
+
+```powershell
+py automate_cli.py fill --mapping discovered_employee_mapping.json --records 320 --choose "Gender=Male,Female" --smart-demographics --scale-bias 0.75 --scale-bias-values 3,4 --output employee_data.json --submit
+```
 

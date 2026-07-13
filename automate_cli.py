@@ -79,6 +79,11 @@ def build_parser():
         help="Number of consecutive 1-5 questions in each category when --scale-bias-range is used. Default: 6.",
     )
     fill.add_argument(
+        "--smart-demographics",
+        action="store_true",
+        help="Match education with realistic age, position, experience, and income combinations.",
+    )
+    fill.add_argument(
         "--submit",
         action="store_true",
         help="Submit generated responses after writing the JSON file.",
@@ -122,6 +127,7 @@ def run_fill(args):
         scale_bias_values=parse_bias_values(args.scale_bias_values),
         scale_bias_range=parse_bias_range(args.scale_bias_range),
         scale_category_size=args.scale_category_size,
+        smart_demographics=args.smart_demographics,
     )
     write_dataset(args.output, rows)
 
@@ -159,4 +165,5 @@ def main(argv=None):
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
 
