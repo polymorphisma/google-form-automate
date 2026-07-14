@@ -124,6 +124,17 @@ def build_parser():
         default=1.0,
         help="Seconds to wait between submissions. Default: 1.0.",
     )
+    submit.add_argument(
+        "--start-row",
+        type=int,
+        default=1,
+        help="1-based row number in --input to start submitting from. Default: 1.",
+    )
+    submit.add_argument(
+        "--limit",
+        type=int,
+        help="Maximum number of rows to submit from --input.",
+    )
     return parser
 
 
@@ -184,6 +195,8 @@ def run_submit(args):
         data_path=args.input,
         form_url=args.form_url,
         delay=args.delay,
+        start_row=args.start_row,
+        limit=args.limit,
     )
     print(f"Finished: {successes}/{total} submissions succeeded.")
     return 0 if successes == total else 1

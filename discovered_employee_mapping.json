@@ -1,341 +1,341 @@
 {
-    "form_url": "https://docs.google.com/forms/d/e/1FAIpQLSc-E7x_Nl0jJsGLWqGhSmhff9XKIbwpinONCs8EHK47rYoevg/formResponse",
-    "fields": {
-        "Name": "entry.759312542",
-        "Gender": "entry.52756930",
-        "Age": "entry.722989316",
-        "Marital_Status": "entry.1376318808",
-        "Education_Level": "entry.347820765",
-        "Position_in_Company": "entry.469506353",
-        "Work_Experience": "entry.1289135924",
-        "Monthly_Income": "entry.353277818",
-        "My_supervisor_communicates_a_clear_vision_for_the_team": "entry.130063170",
-        "My_supervisor_encourages_participation_in_decision_making": "entry.417690636",
-        "My_supervisor_provides_individual_support_when_needed": "entry.103539026",
-        "My_supervisor_motivates_employees_to_perform_beyond_expectations": "entry.395711548",
-        "My_supervisor_builds_trust_and_respect_within_the_team": "entry.268512894",
-        "My_supervisor_clearly_communicates_organizational_goals": "entry.919874247",
-        "Employees_willingly_share_knowledge_and_information": "entry.1810022778",
-        "Team_members_cooperate_to_achieve_common_goals": "entry.1787932102",
-        "Employees_support_each_other_in_completing_tasks": "entry.1348104533",
-        "There_is_strong_trust_among_team_members": "entry.661529938",
-        "Collaboration_across_departments_is_encouraged": "entry.680576793",
-        "Teamwork_is_important_for_organizational_success": "entry.149311001",
-        "Employees_receive_recognition_for_good_performance": "entry.1176487686",
-        "Employees_are_appreciated_for_their_contributions": "entry.1557241514",
-        "Outstanding_performance_is_rewarded_fairly": "entry.1782908862",
-        "Recognition_motivates_employees_to_perform_better": "entry.1930363782",
-        "Employees_feel_valued_when_they_are_recognized": "entry.1579958137",
-        "Recognition_systems_are_fair_in_this_organization": "entry.1706769710",
-        "The_organization_provides_a_supportive_work_environment": "entry.1107523641",
-        "Employees_are_treated_with_respect_in_the_workplace": "entry.1391895641",
-        "Communication_is_open_and_transparent_in_the_organization": "entry.115792588",
-        "The_organization_encourages_innovation_and_new_ideas": "entry.1763501263",
-        "Employees_have_the_resources_needed_to_do_their_jobs": "entry.1353374738",
-        "The_workplace_promotes_work_life_balance": "entry.792583331",
-        "I_feel_emotionally_attached_to_my_organization": "entry.1681005373",
-        "I_feel_a_strong_sense_of_belonging_to_my_organization": "entry.1553324000",
-        "I_am_proud_to_work_for_this_organization": "entry.1661841712",
-        "I_am_willing_to_put_extra_effort_into_my_work": "entry.1406923686",
-        "I_intend_to_continue_working_in_this_organization": "entry.2100917871",
-        "I_would_recommend_this_organization_as_a_good_place_to_work": "entry.1308678115"
-    },
-    "field_labels": {
-        "Name": "Name",
-        "Gender": "Gender",
-        "Age": "Age",
-        "Marital_Status": "Marital Status",
-        "Education_Level": "Education Level",
-        "Position_in_Company": "Position in Company",
-        "Work_Experience": "Work Experience",
-        "Monthly_Income": "Monthly Income",
-        "My_supervisor_communicates_a_clear_vision_for_the_team": "My supervisor communicates a clear vision for the team.",
-        "My_supervisor_encourages_participation_in_decision_making": "My supervisor encourages participation in decision-making.",
-        "My_supervisor_provides_individual_support_when_needed": "My supervisor provides individual support when needed.",
-        "My_supervisor_motivates_employees_to_perform_beyond_expectations": "My supervisor motivates employees to perform beyond expectations. .",
-        "My_supervisor_builds_trust_and_respect_within_the_team": "My supervisor builds trust and respect within the team.",
-        "My_supervisor_clearly_communicates_organizational_goals": "My supervisor clearly communicates organizational goals.",
-        "Employees_willingly_share_knowledge_and_information": "Employees willingly share knowledge and information.",
-        "Team_members_cooperate_to_achieve_common_goals": "Team members cooperate to achieve common goals.",
-        "Employees_support_each_other_in_completing_tasks": "Employees support each other in completing tasks.",
-        "There_is_strong_trust_among_team_members": "There is strong trust among team members.",
-        "Collaboration_across_departments_is_encouraged": "Collaboration across departments is encouraged.",
-        "Teamwork_is_important_for_organizational_success": "Teamwork is important for organizational success.",
-        "Employees_receive_recognition_for_good_performance": "Employees receive recognition for good performance.",
-        "Employees_are_appreciated_for_their_contributions": "Employees are appreciated for their contributions.",
-        "Outstanding_performance_is_rewarded_fairly": "Outstanding performance is rewarded fairly.",
-        "Recognition_motivates_employees_to_perform_better": "Recognition motivates employees to perform better.",
-        "Employees_feel_valued_when_they_are_recognized": "Employees feel valued when they are recognized.",
-        "Recognition_systems_are_fair_in_this_organization": "Recognition systems are fair in this organization.",
-        "The_organization_provides_a_supportive_work_environment": "The organization provides a supportive work environment.",
-        "Employees_are_treated_with_respect_in_the_workplace": "Employees are treated with respect in the workplace.",
-        "Communication_is_open_and_transparent_in_the_organization": "Communication is open and transparent in the organization.",
-        "The_organization_encourages_innovation_and_new_ideas": "The organization encourages innovation and new ideas.",
-        "Employees_have_the_resources_needed_to_do_their_jobs": "Employees have the resources needed to do their jobs.",
-        "The_workplace_promotes_work_life_balance": "The workplace promotes work\u2013life balance.",
-        "I_feel_emotionally_attached_to_my_organization": "I feel emotionally attached to my organization.",
-        "I_feel_a_strong_sense_of_belonging_to_my_organization": "I feel a strong sense of belonging to my organization.",
-        "I_am_proud_to_work_for_this_organization": "I am proud to work for this organization.",
-        "I_am_willing_to_put_extra_effort_into_my_work": "I am willing to put extra effort into my work.",
-        "I_intend_to_continue_working_in_this_organization": "I intend to continue working in this organization.",
-        "I_would_recommend_this_organization_as_a_good_place_to_work": "I would recommend this organization as a good place to work."
-    },
-    "field_options": {
-        "Gender": [
-            "Male",
-            "Female",
-            "Other"
-        ],
-        "Age": [
-            "20-30",
-            "31-40",
-            "41-50",
-            "Above 50"
-        ],
-        "Marital_Status": [
-            "Married",
-            "Unmarried"
-        ],
-        "Education_Level": [
-            "+2",
-            "Bachelor's",
-            "Master's",
-            "MPhil",
-            "PhD"
-        ],
-        "Position_in_Company": [
-            "Junior",
-            "Mid Level",
-            "Senior",
-            "Managerial"
-        ],
-        "Work_Experience": [
-            "Below 1 year",
-            "1\u20133 years",
-            "4\u20136 years",
-            "Above 6 years"
-        ],
-        "Monthly_Income": [
-            "Below NPR 30,000",
-            "NPR 30,001\u2013 NPR 50,000",
-            "NPR 50,001\u2013 NPR 80,000",
-            "Above NPR 80,000"
-        ],
-        "My_supervisor_communicates_a_clear_vision_for_the_team": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "My_supervisor_encourages_participation_in_decision_making": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "My_supervisor_provides_individual_support_when_needed": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "My_supervisor_motivates_employees_to_perform_beyond_expectations": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "My_supervisor_builds_trust_and_respect_within_the_team": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "My_supervisor_clearly_communicates_organizational_goals": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "Employees_willingly_share_knowledge_and_information": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "Team_members_cooperate_to_achieve_common_goals": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "Employees_support_each_other_in_completing_tasks": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "There_is_strong_trust_among_team_members": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "Collaboration_across_departments_is_encouraged": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "Teamwork_is_important_for_organizational_success": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "Employees_receive_recognition_for_good_performance": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "Employees_are_appreciated_for_their_contributions": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "Outstanding_performance_is_rewarded_fairly": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "Recognition_motivates_employees_to_perform_better": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "Employees_feel_valued_when_they_are_recognized": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "Recognition_systems_are_fair_in_this_organization": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "The_organization_provides_a_supportive_work_environment": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "Employees_are_treated_with_respect_in_the_workplace": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "Communication_is_open_and_transparent_in_the_organization": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "The_organization_encourages_innovation_and_new_ideas": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "Employees_have_the_resources_needed_to_do_their_jobs": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "The_workplace_promotes_work_life_balance": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "I_feel_emotionally_attached_to_my_organization": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "I_feel_a_strong_sense_of_belonging_to_my_organization": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "I_am_proud_to_work_for_this_organization": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "I_am_willing_to_put_extra_effort_into_my_work": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "I_intend_to_continue_working_in_this_organization": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "I_would_recommend_this_organization_as_a_good_place_to_work": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ]
-    },
-    "static_data": {
-        "fvv": "1",
-        "draftResponse": "[]",
-        "pageHistory": "0",
-        "fbzx": "-7665882186055977361"
-    }
+  "form_url": "https://docs.google.com/forms/d/e/1FAIpQLSc-E7x_Nl0jJsGLWqGhSmhff9XKIbwpinONCs8EHK47rYoevg/formResponse",
+  "fields": {
+    "Name": "entry.759312542",
+    "Gender": "entry.52756930",
+    "Age": "entry.722989316",
+    "Marital_Status": "entry.1376318808",
+    "Education_Level": "entry.347820765",
+    "Position_in_Company": "entry.469506353",
+    "Work_Experience": "entry.1289135924",
+    "Monthly_Income": "entry.353277818",
+    "My_supervisor_communicates_a_clear_vision_for_the_team": "entry.130063170",
+    "My_supervisor_encourages_participation_in_decision_making": "entry.417690636",
+    "My_supervisor_provides_individual_support_when_needed": "entry.103539026",
+    "My_supervisor_motivates_employees_to_perform_beyond_expectations": "entry.395711548",
+    "My_supervisor_builds_trust_and_respect_within_the_team": "entry.268512894",
+    "My_supervisor_clearly_communicates_organizational_goals": "entry.919874247",
+    "Employees_willingly_share_knowledge_and_information": "entry.1810022778",
+    "Team_members_cooperate_to_achieve_common_goals": "entry.1787932102",
+    "Employees_support_each_other_in_completing_tasks": "entry.1348104533",
+    "There_is_strong_trust_among_team_members": "entry.661529938",
+    "Collaboration_across_departments_is_encouraged": "entry.680576793",
+    "Teamwork_is_important_for_organizational_success": "entry.149311001",
+    "Employees_receive_recognition_for_good_performance": "entry.1176487686",
+    "Employees_are_appreciated_for_their_contributions": "entry.1557241514",
+    "Outstanding_performance_is_rewarded_fairly": "entry.1782908862",
+    "Recognition_motivates_employees_to_perform_better": "entry.1930363782",
+    "Employees_feel_valued_when_they_are_recognized": "entry.1579958137",
+    "Recognition_systems_are_fair_in_this_organization": "entry.1706769710",
+    "The_organization_provides_a_supportive_work_environment": "entry.1107523641",
+    "Employees_are_treated_with_respect_in_the_workplace": "entry.1391895641",
+    "Communication_is_open_and_transparent_in_the_organization": "entry.115792588",
+    "The_organization_encourages_innovation_and_new_ideas": "entry.1763501263",
+    "Employees_have_the_resources_needed_to_do_their_jobs": "entry.1353374738",
+    "The_workplace_promotes_work_life_balance": "entry.792583331",
+    "I_feel_emotionally_attached_to_my_organization": "entry.1681005373",
+    "I_feel_a_strong_sense_of_belonging_to_my_organization": "entry.1553324000",
+    "I_am_proud_to_work_for_this_organization": "entry.1661841712",
+    "I_am_willing_to_put_extra_effort_into_my_work": "entry.1406923686",
+    "I_intend_to_continue_working_in_this_organization": "entry.2100917871",
+    "I_would_recommend_this_organization_as_a_good_place_to_work": "entry.1308678115"
+  },
+  "field_labels": {
+    "Name": "Name",
+    "Gender": "Gender",
+    "Age": "Age",
+    "Marital_Status": "Marital Status",
+    "Education_Level": "Education Level",
+    "Position_in_Company": "Position in Company",
+    "Work_Experience": "Work Experience",
+    "Monthly_Income": "Monthly Income",
+    "My_supervisor_communicates_a_clear_vision_for_the_team": "My supervisor communicates a clear vision for the team.",
+    "My_supervisor_encourages_participation_in_decision_making": "My supervisor encourages participation in decision-making.",
+    "My_supervisor_provides_individual_support_when_needed": "My supervisor provides individual support when needed.",
+    "My_supervisor_motivates_employees_to_perform_beyond_expectations": "My supervisor motivates employees to perform beyond expectations. .",
+    "My_supervisor_builds_trust_and_respect_within_the_team": "My supervisor builds trust and respect within the team.",
+    "My_supervisor_clearly_communicates_organizational_goals": "My supervisor clearly communicates organizational goals.",
+    "Employees_willingly_share_knowledge_and_information": "Employees willingly share knowledge and information.",
+    "Team_members_cooperate_to_achieve_common_goals": "Team members cooperate to achieve common goals.",
+    "Employees_support_each_other_in_completing_tasks": "Employees support each other in completing tasks.",
+    "There_is_strong_trust_among_team_members": "There is strong trust among team members.",
+    "Collaboration_across_departments_is_encouraged": "Collaboration across departments is encouraged.",
+    "Teamwork_is_important_for_organizational_success": "Teamwork is important for organizational success.",
+    "Employees_receive_recognition_for_good_performance": "Employees receive recognition for good performance.",
+    "Employees_are_appreciated_for_their_contributions": "Employees are appreciated for their contributions.",
+    "Outstanding_performance_is_rewarded_fairly": "Outstanding performance is rewarded fairly.",
+    "Recognition_motivates_employees_to_perform_better": "Recognition motivates employees to perform better.",
+    "Employees_feel_valued_when_they_are_recognized": "Employees feel valued when they are recognized.",
+    "Recognition_systems_are_fair_in_this_organization": "Recognition systems are fair in this organization.",
+    "The_organization_provides_a_supportive_work_environment": "The organization provides a supportive work environment.",
+    "Employees_are_treated_with_respect_in_the_workplace": "Employees are treated with respect in the workplace.",
+    "Communication_is_open_and_transparent_in_the_organization": "Communication is open and transparent in the organization.",
+    "The_organization_encourages_innovation_and_new_ideas": "The organization encourages innovation and new ideas.",
+    "Employees_have_the_resources_needed_to_do_their_jobs": "Employees have the resources needed to do their jobs.",
+    "The_workplace_promotes_work_life_balance": "The workplace promotes work–life balance.",
+    "I_feel_emotionally_attached_to_my_organization": "I feel emotionally attached to my organization.",
+    "I_feel_a_strong_sense_of_belonging_to_my_organization": "I feel a strong sense of belonging to my organization.",
+    "I_am_proud_to_work_for_this_organization": "I am proud to work for this organization.",
+    "I_am_willing_to_put_extra_effort_into_my_work": "I am willing to put extra effort into my work.",
+    "I_intend_to_continue_working_in_this_organization": "I intend to continue working in this organization.",
+    "I_would_recommend_this_organization_as_a_good_place_to_work": "I would recommend this organization as a good place to work."
+  },
+  "field_options": {
+    "Gender": [
+      "Male",
+      "Female",
+      "Other"
+    ],
+    "Age": [
+      "20-30",
+      "31-40",
+      "41-50",
+      "Above 50"
+    ],
+    "Marital_Status": [
+      "Married",
+      "Unmarried"
+    ],
+    "Education_Level": [
+      "+2",
+      "Bachelor's",
+      "Master's",
+      "MPhil",
+      "PhD"
+    ],
+    "Position_in_Company": [
+      "Junior",
+      "Mid Level",
+      "Senior",
+      "Managerial"
+    ],
+    "Work_Experience": [
+      "Below 1 year",
+      "1–3 years",
+      "4–6 years",
+      "Above 6 years"
+    ],
+    "Monthly_Income": [
+      "Below NPR 30,000",
+      "NPR 30,001– NPR 50,000",
+      "NPR 50,001– NPR 80,000",
+      "Above NPR 80,000"
+    ],
+    "My_supervisor_communicates_a_clear_vision_for_the_team": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "My_supervisor_encourages_participation_in_decision_making": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "My_supervisor_provides_individual_support_when_needed": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "My_supervisor_motivates_employees_to_perform_beyond_expectations": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "My_supervisor_builds_trust_and_respect_within_the_team": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "My_supervisor_clearly_communicates_organizational_goals": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "Employees_willingly_share_knowledge_and_information": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "Team_members_cooperate_to_achieve_common_goals": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "Employees_support_each_other_in_completing_tasks": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "There_is_strong_trust_among_team_members": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "Collaboration_across_departments_is_encouraged": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "Teamwork_is_important_for_organizational_success": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "Employees_receive_recognition_for_good_performance": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "Employees_are_appreciated_for_their_contributions": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "Outstanding_performance_is_rewarded_fairly": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "Recognition_motivates_employees_to_perform_better": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "Employees_feel_valued_when_they_are_recognized": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "Recognition_systems_are_fair_in_this_organization": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "The_organization_provides_a_supportive_work_environment": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "Employees_are_treated_with_respect_in_the_workplace": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "Communication_is_open_and_transparent_in_the_organization": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "The_organization_encourages_innovation_and_new_ideas": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "Employees_have_the_resources_needed_to_do_their_jobs": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "The_workplace_promotes_work_life_balance": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "I_feel_emotionally_attached_to_my_organization": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "I_feel_a_strong_sense_of_belonging_to_my_organization": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "I_am_proud_to_work_for_this_organization": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "I_am_willing_to_put_extra_effort_into_my_work": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "I_intend_to_continue_working_in_this_organization": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "I_would_recommend_this_organization_as_a_good_place_to_work": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  },
+  "static_data": {
+    "fvv": "1",
+    "draftResponse": "[]",
+    "pageHistory": "0,1,2,3,4,5",
+    "fbzx": "-7665882186055977361"
+  }
 }

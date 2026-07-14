@@ -62,21 +62,31 @@ class GoogleFormSubmitter:
         return False
 
 
-def submit_dataset(mapping_path, data_path, form_url=None, delay=1.0, error_path="error_response.html"):
+def submit_dataset(mapping_path, data_path, form_url=None, delay=1.0, error_path="error_response.html", start_row=1, limit=None):
+    if start_row < 1:
+        raise ValueError("start_row must be at least 1")
+    if limit is not None and limit < 1:
+        raise ValueError("limit must be at least 1 when provided")
+
     submitter = GoogleFormSubmitter(mapping_path, form_url=form_url, error_path=error_path)
 
     with open(data_path, "r") as f:
-        rows = json.load(f)
+        all_rows = json.load(f)
 
-    print(f"Starting submission for {len(rows)} records...")
+    rows = all_rows[start_row - 1:]
+    if limit is not None:
+        rows = rows[:limit]
+
+    print(f"Starting submission for {len(rows)} records from row {start_row}...")
     successes = 0
-    for index, row in enumerate(rows, start=1):
+    for offset, row in enumerate(rows, start=0):
+        index = start_row + offset
         try:
             if submitter.submit(row):
                 successes += 1
-                print(f"[SUCCESS] Submitted record {index}/{len(rows)}")
+                print(f"[SUCCESS] Submitted source row {index} ({offset + 1}/{len(rows)})")
         except Exception as exc:
-            print(f"[EXCEPTION] Record {index}/{len(rows)} failed: {exc}")
+            print(f"[EXCEPTION] Source row {index} failed: {exc}")
         time.sleep(delay)
 
     return successes, len(rows)
