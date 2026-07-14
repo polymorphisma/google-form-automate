@@ -1,3 +1,4 @@
+import csv
 import json
 import random
 
@@ -108,7 +109,38 @@ def canonical_choices(values, options):
     return canonical
 
 
-def random_name(index):
+def load_names_csv(path):
+    if not path:
+        return []
+
+    with open(path, newline="", encoding="utf-8-sig") as f:
+        reader = csv.DictReader(f)
+        if not reader.fieldnames:
+            raise ValueError(f"No header row found in names CSV: {path}")
+
+        name_column = None
+        for fieldname in reader.fieldnames:
+            if fieldname and fieldname.strip().lower() in {"emp name", "name"}:
+                name_column = fieldname
+                break
+        if name_column is None:
+            available = ", ".join(fieldname for fieldname in reader.fieldnames if fieldname)
+            raise ValueError(f"Could not find an Emp Name or Name column in {path}. Available columns: {available}")
+
+        names = []
+        for row in reader:
+            name = (row.get(name_column) or "").strip()
+            if name:
+                names.append(name)
+
+    if not names:
+        raise ValueError(f"No names found in {path}")
+    return names
+
+
+def random_name(index, names=None):
+    if names and index < len(names):
+        return names[index]
     return f"{FAKER.first_name()} {FAKER.last_name()}"
 
 
@@ -147,7 +179,7 @@ def build_scale_biases(field_keys, options_by_key, scale_bias, scale_bias_range,
     return biases
 
 
-def value_for_field(key, options, fixed_values, choice_values, index, scale_bias, scale_bias_values):
+def value_for_field(key, options, fixed_values, choice_values, index, scale_bias, scale_bias_values, names=None):
     if key in fixed_values:
         return canonical_option(fixed_values[key], options)
 
@@ -156,7 +188,7 @@ def value_for_field(key, options, fixed_values, choice_values, index, scale_bias
 
     normalized = key.lower()
     if normalized == "name" or normalized.endswith("_name"):
-        return random_name(index)
+        return random_name(index, names=names)
 
     if is_likert_scale(options):
         return weighted_likert_choice(options, scale_bias, scale_bias_values)
@@ -269,6 +301,7 @@ def generate_generic_dataset(
     scale_bias_range=None,
     scale_category_size=6,
     smart_demographics=False,
+    names_csv=None,
 ):
     if records < 1:
         raise ValueError("records must be at least 1")
@@ -279,6 +312,7 @@ def generate_generic_dataset(
     scale_bias_values = scale_bias_values or ["3", "4"]
 
     mapping = load_mapping(mapping_path)
+    names = load_names_csv(names_csv)
     fixed_values = fixed_values or {}
     choice_values = choice_values or {}
     choice_values = validate_field_overrides(mapping, fixed_values, choice_values)
@@ -305,6 +339,7 @@ def generate_generic_dataset(
                 index,
                 scale_biases.get(key, scale_bias),
                 scale_bias_values,
+                names=names,
             )
         if smart_demographics:
             apply_smart_demographics(row, options_by_key, fixed_values, choice_values)
@@ -315,6 +350,10 @@ def generate_generic_dataset(
 def write_dataset(path, rows):
     with open(path, "w") as f:
         json.dump(rows, f, indent=4)
+
+
+
+
 
 
 

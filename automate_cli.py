@@ -58,6 +58,10 @@ def build_parser():
     )
     fill.add_argument("--seed", type=int, help="Optional random seed for repeatable generated data.")
     fill.add_argument(
+        "--names-csv",
+        help="CSV file with an Emp Name or Name column to use for generated Name values.",
+    )
+    fill.add_argument(
         "--scale-bias",
         type=float,
         default=0.7,
@@ -128,6 +132,7 @@ def run_fill(args):
         scale_bias_range=parse_bias_range(args.scale_bias_range),
         scale_category_size=args.scale_category_size,
         smart_demographics=args.smart_demographics,
+        names_csv=args.names_csv,
     )
     write_dataset(args.output, rows)
 

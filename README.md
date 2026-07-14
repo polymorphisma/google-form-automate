@@ -142,3 +142,13 @@ Submit after checking `employee_data.json`:
 py automate_cli.py fill --mapping discovered_employee_mapping.json --records 320 --choose "Gender=Male,Female" --smart-demographics --scale-bias 0.75 --scale-bias-values 3,4 --output employee_data.json --submit
 ```
 
+
+## Use Names From CSV
+
+Use the salary reference CSV names when generating responses:
+
+```powershell
+py automate_cli.py fill --mapping discovered_employee_mapping.json --records 320 --names-csv "C:\Users\shrawan.sunar\Downloads\salary  Refrence (1).xls - Sheet1.csv" --choose "Gender=Male,Female" --smart-demographics --scale-bias 0.75 --scale-bias-values 3,4 --output employee_data.json
+```
+
+The CSV must include an `Emp Name` or `Name` column. Names are used in CSV order; Faker is only used if you request more records than there are CSV names.
