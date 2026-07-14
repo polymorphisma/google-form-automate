@@ -2,4 +2,3 @@ __pycache__/
 *.py[cod]
 error_response.html
 form_data.json
-*_data.json
