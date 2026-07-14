@@ -102,6 +102,28 @@ def build_parser():
         default=1.0,
         help="Seconds to wait between submissions when --submit is used. Default: 1.0.",
     )
+
+    submit = subparsers.add_parser("submit", help="Submit an existing JSON data file without regenerating it.")
+    submit.add_argument(
+        "--mapping",
+        default=DEFAULT_MAPPING,
+        help=f"Mapping JSON from the discover command. Default: {DEFAULT_MAPPING}.",
+    )
+    submit.add_argument(
+        "--input",
+        default=DEFAULT_OUTPUT,
+        help=f"Existing JSON data file to submit. Default: {DEFAULT_OUTPUT}.",
+    )
+    submit.add_argument(
+        "--form-url",
+        help="Optional form URL override. Usually not needed because it is stored in the mapping.",
+    )
+    submit.add_argument(
+        "--delay",
+        type=float,
+        default=1.0,
+        help="Seconds to wait between submissions. Default: 1.0.",
+    )
     return parser
 
 
@@ -155,6 +177,17 @@ def run_fill(args):
     return 0 if successes == total else 1
 
 
+
+def run_submit(args):
+    successes, total = submit_dataset(
+        mapping_path=args.mapping,
+        data_path=args.input,
+        form_url=args.form_url,
+        delay=args.delay,
+    )
+    print(f"Finished: {successes}/{total} submissions succeeded.")
+    return 0 if successes == total else 1
+
 def main(argv=None):
     parser = build_parser()
     args = parser.parse_args(argv)
@@ -163,6 +196,8 @@ def main(argv=None):
         return run_discover(args)
     if args.command == "fill":
         return run_fill(args)
+    if args.command == "submit":
+        return run_submit(args)
 
     parser.print_help()
     return 2
